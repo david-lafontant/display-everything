@@ -29,7 +29,7 @@
 
 Every-Display is an app that contains a component named every that accepts an "input" prop. If the "input" prop is falsy, render a live-updating date and time that updates every second. If the "input" prop is an array, render the array's elements in a list. If the "input" prop is anything else, render the value in.
 
-The variable value (line 7 in App.jsx) is the props to be passed to the everything component.
+The variable input (line 7 in App.jsx) is the props to be passed to the everything component.
   it can be an array (ex: const value = [1,2,3,'dan']), a string or a number.
   it can be object (ex: const value= {age: 1, weight: 50, name: 'Dan'}).
   it can also be any falsy value (as defined in https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
