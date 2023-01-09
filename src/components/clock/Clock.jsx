@@ -29,6 +29,22 @@ const Clock = ({value}) => {
       </ul>
     );
   }
+
+  switch (typeof value) {
+    case 'number':
+    case 'string':
+      return (<p>{value}</p>);
+    case 'object':
+      const list = Object.values(value);
+      return (
+        <ul>
+          {list.map(item => <li key={item}>{item}</li>)}
+        </ul>
+      )
+
+    default:
+      return <p>inadequate input</p>;
+  }
 }
 
 Clock.propTypes = {
