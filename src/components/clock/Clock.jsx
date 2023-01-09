@@ -19,6 +19,16 @@ const Clock = ({value}) => {
       </p>
     )
   }
+
+  if (Array.isArray(value)) {
+    return (
+      <ul>
+        {
+          value.map(item => <li key={item}>{item}</li>)
+        }
+      </ul>
+    );
+  }
 }
 
 Clock.propTypes = {
