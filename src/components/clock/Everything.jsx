@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Clock = ({value}) => {
+const Everything = ({value}) => {
   const [date, setDate] = useState(new Date());
   useEffect(() => {
     setInterval(() => setDate(new Date()), 1000);
@@ -53,8 +53,8 @@ const Clock = ({value}) => {
   }
 }
 
-Clock.propTypes = {
+Everything.propTypes = {
   value: PropTypes.any
 }
 
-export default Clock;
+export default Everything;
