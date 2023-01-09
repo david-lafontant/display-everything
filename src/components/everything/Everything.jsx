@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Everything = ({value}) => {
+const Everything = ({input}) => {
   const [date, setDate] = useState(new Date());
   useEffect(() => {
     setInterval(() => setDate(new Date()), 1000);
@@ -13,7 +13,7 @@ const Everything = ({value}) => {
     color: '#34ebeb'
   }
 
-  if (!value) {
+  if (!input) {
     return (
 
       <p style={myStyle}>
@@ -26,22 +26,22 @@ const Everything = ({value}) => {
     )
   }
 
-  if (Array.isArray(value)) {
+  if (Array.isArray(input)) {
     return (
       <ul style={{listStyleType: 'none', display: 'flex', flexDirection: 'column', gap: '1.1rem'}}>
         {
-          value.map(item => <li style={myStyle} key={item}>{item}</li>)
+          input.map(item => <li style={myStyle} key={item}>{item}</li>)
         }
       </ul>
     );
   }
 
-  switch (typeof value) {
+  switch (typeof input) {
     case 'number':
     case 'string':
-      return (<p>{value}</p>);
+      return (<p>{input}</p>);
     case 'object':
-      const list = Object.values(value);
+      const list = Object.inputs(input);
       return (
         <ul style={{listStyleType: 'none'}}>
           {list.map(item => <li style={myStyle} key={item}>{item}</li>)}
@@ -54,7 +54,7 @@ const Everything = ({value}) => {
 }
 
 Everything.propTypes = {
-  value: PropTypes.any
+  input: PropTypes.any
 }
 
 export default Everything;
