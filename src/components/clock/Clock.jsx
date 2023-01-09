@@ -7,10 +7,16 @@ const Clock = ({value}) => {
     setInterval(() => setDate(new Date()), 1000);
   }, []);
 
+  const myStyle = {
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    color: '#34ebeb'
+  }
+
   if (!value) {
     return (
 
-      <p>
+      <p style={myStyle}>
         {date.toLocaleString('en-US', {
           hour: 'numeric',
           minute: 'numeric',
@@ -22,9 +28,9 @@ const Clock = ({value}) => {
 
   if (Array.isArray(value)) {
     return (
-      <ul>
+      <ul style={{listStyleType: 'none', display: 'flex', flexDirection: 'column', gap: '1.1rem'}}>
         {
-          value.map(item => <li key={item}>{item}</li>)
+          value.map(item => <li style={myStyle} key={item}>{item}</li>)
         }
       </ul>
     );
@@ -37,8 +43,8 @@ const Clock = ({value}) => {
     case 'object':
       const list = Object.values(value);
       return (
-        <ul>
-          {list.map(item => <li key={item}>{item}</li>)}
+        <ul style={{listStyleType: 'none'}}>
+          {list.map(item => <li style={myStyle} key={item}>{item}</li>)}
         </ul>
       )
 
