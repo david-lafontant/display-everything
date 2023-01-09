@@ -8,11 +8,11 @@ function App() {
   // it can be object (ex: const value= {age: 1, weight: 50, name: 'Dan'}).
   // it can also be any falsy value (as defined in https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
  
-  const value = null;
+  const input = null;
 
   return (
     <div className="App">
-      <Everything value={value} />
+      <Everything input={value} />
     </div>
   )
 }
