@@ -21,6 +21,8 @@ const Clock = ({value}) => {
   }
 }
 
-Clock.propTypes = {}
+Clock.propTypes = {
+  value: PropTypes.any
+}
 
 export default Clock;
