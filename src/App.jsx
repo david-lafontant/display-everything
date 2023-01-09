@@ -1,32 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import './App.css';
+import Everything from './components/everything/Everything'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  // The variable value (line 7) is the props to be passed to the everything component.
+  // it can be an array (ex: const value = [1,2,3,'dan']), a string or a number.
+  // it can be object (ex: const value= {age: 1, weight: 50, name: 'Dan'}).
+  // it can also be any falsy value (as defined in https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+ 
+  const input = null;
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Everything input={input} />
     </div>
   )
 }
