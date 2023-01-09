@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <Everything input={value} />
+      <Everything input={input} />
     </div>
   )
 }
