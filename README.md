@@ -27,7 +27,7 @@
 
 ## Description
 
-Every-Display is an app that contains a component named every that accepts an "input" prop. If the "input" prop is falsy, render a live-updating date and time that updates every second. If the "input" prop is an array, render the array's elements in a list. If the "input" prop is anything else, render the value in.
+Display-everything is an app that contains a component named Everything that accepts an "input" prop. If the "input" prop is falsy, render a live-updating date and time that updates every second. If the "input" prop is an array, render the array's elements in a list. If the "input" prop is anything else, render the value in.
 
 The variable input (line 7 in App.jsx) is the props to be passed to the everything component.
   it can be an array (ex: const value = [1,2,3,'dan']), a string or a number.
